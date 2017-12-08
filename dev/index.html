@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherUA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Weather forecast for 5 days">
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" href="libs/semantic/semantic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="ui container">
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img width="150" src="img/logo-3.png" alt="WeatherUA">
+                </a>
+                <h1>Weather<span>UA</span></h1>
+            </div>
+        </header>
+        <main>
+            <div class="ui fluid action input">
+                <input type="text" id="city" placeholder="Search...">
+                <div class="ui button" id="search">Search</div>
+            </div>
+            <div id="result" class="ui segment"></div>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- build:js js/semantic.min.js -->
+    <script src="libs/semantic/semantic.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/handlebars.min.js -->
+    <script src="js/handlebars-v4.0.11.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/main.min.js -->
+    <script src="js/bundle/main.js"></script>
+    <!-- endbuild -->   
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <h1>{{city.name}}</h1>
+        <div class="body">
+          {{body}}
+        </div>
+      </div>
+    </script>   
+    <script id="weatherTpl" type="text/x-handlebars-template">
+        <div class="info">
+            <div class="general-info">
+                <h2>{{city}}</h2>
+                <p>Time: <span id="time">{{time}}</span></p>
+                <p>Weather: <span id="weather">{{weather}}</span></p>
+                <p>Humidity: <span id="humidity">{{humidity}}</span>%</p>
+                <p>Wind: <span id="wind">{{wind}}</span>m/s</p>
+            </div>
+            <div class="temperature">
+                <p><span id="temp">{{temp}}</span>°C</p>
+                <img id="img" src="img/{{img}}" alt="temp">
+            </div>
+        </div>
+        <div class="ui eight column doubling grid temp-for-time">
+            {{#each weatherTime}}
+                <div class="column">
+                    <p>{{temp}}°C</p>
+                    <div class="ui clearing divider"></div>
+                    <p>{{time}}</p>
+                </div>
+            {{/each}}
+        </div>         
+        <div class="ui six column grid stackable days">
+            {{#each days}}
+                <div class="column">
+                    <div class="day {{#unless @index}}active{{/unless}}" id="{{name}}">
+                        <p>{{name}}</p>
+                        <img src="img/{{img}}" alt="">
+                        <p>{{minTemp}}  {{maxTemp}}°C</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </script>
+</body>
+</html>

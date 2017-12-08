@@ -1,0 +1,126 @@
+header {
+  padding: 15px 0;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+header .logo a {
+  color: #a4a4a4;
+  font-weight: bold;
+}
+
+header .logo a:hover {
+  color: #a4a4a4;
+}
+
+header .logo h1 {
+  font-size: 48px;
+  color: #a4a4a4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .logo h1 span {
+  color: #ff8833;
+  font-weight: bold;
+}
+
+main img {
+  width: 64px;
+}
+
+main .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+main .info .general-info {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+main .info .general-info h2 {
+  color: #a4a4a4;
+  font-weight: bold;
+}
+
+main .info .general-info p {
+  margin: 0;
+  color: #a4a4a4;
+}
+
+main .info .temperature {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+main .info .temperature p {
+  font-size: 48px;
+  margin: 0 15px 0 0;
+}
+
+main .temp-for-time {
+  color: #a4a4a4;
+  text-align: center;
+}
+
+main .temp-for-time .column {
+  margin: 10px 0 0 0;
+}
+
+main .days {
+  text-align: center;
+  color: #a4a4a4;
+}
+
+main .days .day {
+  border: 1px solid rgba(34, 36, 38, 0);
+}
+
+main .days .day:hover {
+  cursor: pointer;
+}
+
+main .days .active {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.ui.input input:focus {
+  border-color: #ff8833;
+}
+
+.ui.action.input:not([class*="left action"]) input:focus {
+  border-right-color: #ff8833 !important;
+}

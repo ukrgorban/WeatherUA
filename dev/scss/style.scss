@@ -1,0 +1,90 @@
+header{
+    padding: 15px 0;
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        a{
+            color: #a4a4a4;
+            font-weight: bold;
+            &:hover{
+                color: #a4a4a4;
+            }
+        }
+        
+        h1{
+            font-size: 48px;
+            color: #a4a4a4;
+            font-weight: bold;
+            text-transform: uppercase;
+            span{
+                color: #ff8833;
+                font-weight: bold;
+            } 
+        }
+        
+    }
+}
+
+main{
+    img{
+        width: 64px;
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .general-info{
+            flex-grow: 1;
+            h2{
+                color: #a4a4a4;
+                font-weight: bold;
+            }
+            p{
+                margin: 0;
+                color: #a4a4a4;
+            }
+        }
+        
+        .temperature{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            p{
+                font-size: 48px;
+                margin: 0 15px 0 0;
+            }
+        }
+    }
+    .temp-for-time{
+        color: #a4a4a4;
+        text-align: center;
+        .column{
+            margin: 10px 0 0 0;
+        }
+    }
+    .days{
+        text-align: center;
+        color: #a4a4a4;
+        .day{
+            &:hover{
+                cursor: pointer;
+            }
+            border: 1px solid rgba(34,36,38, 0);
+        }
+        .active{
+            border: 1px solid rgba(34,36,38,.15);
+        }
+    }
+}
+
+.ui.input input:focus{
+    border-color: #ff8833;
+}
+
+.ui.action.input:not([class*="left action"]) input:focus {
+    border-right-color: #ff8833!important;
+}
